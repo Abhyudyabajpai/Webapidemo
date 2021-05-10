@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebAPIdemo.EmployeeData;
 
 namespace WebAPIdemo
 {
@@ -27,6 +28,7 @@ namespace WebAPIdemo
         {
 
             services.AddControllers();
+            services.AddSingleton<IEmployeeData, MockEmployeeData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
